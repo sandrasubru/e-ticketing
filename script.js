@@ -128,6 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display price on payment page
     const priceToPay = localStorage.getItem("price");
     if (priceToPay) {
-        document.getElementById('priceToPay').innerText = ` ₹${priceToPay}  `;
+        document.getElementById('priceToPay').innerText = ` ${priceToPay}  `;
     }
 });
