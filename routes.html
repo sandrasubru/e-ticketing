@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Route</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Select Your Route</h2>
+        <form id="routeForm">
+            <label for="route">Choose Route:</label>
+            <select id="route" required>
+                <option value="">Select</option>
+                <option value="Towards Ernakulam">Route 1 - Towards Ernakulam</option>
+                <option value="Towards Thrissur">Route 2 - Towards Thrissur</option>
+            </select>
+
+            <label for="way">Select Way:</label>
+            <select id="way" required>
+                <option value="">Select</option>
+                <option value="One Way">Way 1 - One way</option>
+                <option value="Two Way">Way 2 - Two way</option>
+            </select>
+
+            <!-- Add the Date Selection -->
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" required>
+
+            <h3 id="priceDisplay">Price: ₹0</h3>
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <script src="script1.js"></script>
+    <script>
+        // Check if the user is authenticated (i.e., if details exist in localStorage)
+        if (!localStorage.getItem("name") || !localStorage.getItem("regNumber") || !localStorage.getItem("password")) {
+            // If not authenticated, redirect back to the login page (index.html)
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

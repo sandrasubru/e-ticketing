@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Ticket Confirmed!</h2>
+        <p>Thank you for booking your college transport ticket.</p>
+        <p>Register Number: <span id="finalRegNumber"></span></p>
+        <p>Name: <span id="finalName"></span></p>
+        <p>Route: <span id="finalRoute"></span></p>
+        <p>Way: <span id="finalWay"></span></p>
+        <p>Price: ₹<span id="finalPrice"></span></p>
+        <p>Selected Date: <span id="finalDate"></span></p> <!-- Display selected date -->
+        <p><strong>Payment Status:</strong> <span id="paymentStatus"></span></p>
+    </div>
+    <script>
+        // Retrieve details from localStorage
+        const regNumber = localStorage.getItem("regNumber");
+        const name = localStorage.getItem("name");
+        const route = localStorage.getItem("route");
+        const way = localStorage.getItem("way");
+        const price = localStorage.getItem("price");
+        const paymentStatus = localStorage.getItem("paymentStatus");
+        const selectedDate = localStorage.getItem("date"); // Get the selected date
+
+        document.getElementById("finalRegNumber").innerText = regNumber;
+        document.getElementById("finalName").innerText = name;
+        document.getElementById("finalRoute").innerText = route;
+        document.getElementById("finalWay").innerText = way;
+        document.getElementById("finalPrice").innerText = price;
+        document.getElementById("finalDate").innerText = selectedDate; // Display the date
+        document.getElementById("paymentStatus").innerText = paymentStatus;
+    </script>
+</body>
+</html>

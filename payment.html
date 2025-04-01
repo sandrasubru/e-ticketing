@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - College Transport</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Scan QR Code to Pay</h2>
+        <p>Use Google Pay, PhonePe, or Paytm to scan and pay.</p>
+        <img src="qr-code.jpg" alt="QR Code" id="qrCode">
+        <h3>Price to Pay: ₹<span id="priceToPay">0</span></h3>
+        <h3>Enter Transaction ID After Payment</h3>
+        <form id="paymentForm">
+            <label>Transaction ID:</label>
+            <input type="text" id="transactionId" required>
+            <button type="submit">Confirm Payment</button>
+        </form>
+        <p id="paymentStatus"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
